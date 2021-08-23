@@ -29,7 +29,7 @@ $ tar jxvf dlib-19.21.tar.bz2
 $ cd dlib-19.21/
 $ mkdir build
 $ cd build/
-$ cmake .. -DDLIB_USE_CUDA=1 -DUSE_AVX_INSTRUCTIONS=1 -DCUDA_HOST_COMPILER=/usr/bin/gcc-6
+$ cmake .. -DDLIB_USE_CUDA=1 -DCUDA_HOST_COMPILER=/usr/bin/gcc-6
 $ cd ..
 $ sudo python3 setup.py install --set DLIB_USE_CUDA=1 --set CUDA_HOST_COMPILER=/usr/bin/gcc-6
 ```
