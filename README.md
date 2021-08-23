@@ -1,4 +1,4 @@
-# faceRecognizer_Jetson-nano
+# faceRecognizer with Jetson nano
 
 # 1. Install face_recognition
 ```
