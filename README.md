@@ -1,4 +1,5 @@
 # faceRecognizer with Jetson nano
+See also https://wisteriahill.sakura.ne.jp/CMS/WordPress/2020/12/15/jetson-nano-build-dlib-use-gpu-for-face-recognition/ before install of dlib and face_recognition.
 
 # 1. Install face_recognition
 ```
