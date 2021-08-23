@@ -1,6 +1,42 @@
 # faceRecognizer with Jetson nano
 See also https://wisteriahill.sakura.ne.jp/CMS/WordPress/2020/12/15/jetson-nano-build-dlib-use-gpu-for-face-recognition/ before install of dlib and face_recognition.
 
+# 0. Jetpack version
+```
+$ sudo apt show nvidia-jetpack -a
+Package: nvidia-jetpack
+Version: 4.5.1-b17
+Priority: standard
+Section: metapackages
+Maintainer: NVIDIA Corporation
+Installed-Size: 199 kB
+Depends: nvidia-cuda (= 4.5.1-b17), nvidia-opencv (= 4.5.1-b17), nvidia-cudnn8 (= 4.5.1-b17), nvidia-tensorrt (= 4.5.1-b17), nvidia-visionworks (= 4.5.1-b17), nvidia-container (= 4.5.1-b17), nvidia-vpi (= 4.5.1-b17), nvidia-l4t-jetson-multimedia-api (>> 32.5-0), nvidia-l4t-jetson-multimedia-api (<< 32.6-0)
+Homepage: http://developer.nvidia.com/jetson
+Download-Size: 29.4 kB
+APT-Sources: https://repo.download.nvidia.com/jetson/t210 r32.5/main arm64 Packages
+Description: NVIDIA Jetpack Meta Package
+
+Package: nvidia-jetpack
+Version: 4.5-b129
+Priority: standard
+Section: metapackages
+Maintainer: NVIDIA Corporation
+Installed-Size: 199 kB
+Depends: nvidia-cuda (= 4.5-b129), nvidia-opencv (= 4.5-b129), nvidia-cudnn8 (= 4.5-b129), nvidia-tensorrt (= 4.5-b129), nvidia-visionworks (= 4.5-b129), nvidia-container (= 4.5-b129), nvidia-vpi (= 4.5-b129), nvidia-l4t-jetson-multimedia-api (>> 32.5-0), nvidia-l4t-jetson-multimedia-api (<< 32.6-0)
+Homepage: http://developer.nvidia.com/jetson
+Download-Size: 29.4 kB
+APT-Sources: https://repo.download.nvidia.com/jetson/t210 r32.5/main arm64 Packages
+Description: NVIDIA Jetpack Meta Package
+
+$ cat /etc/nv_tegra_release
+# R32 (release), REVISION: 5.1, GCID: 26202423, BOARD: t210ref, EABI: aarch64, DATE: Fri Feb 19 16:45:52 UTC 2021
+
+$ sudo nvpmodel -q
+NVPM WARN: fan mode is not set!
+NV Power Mode: MAXN
+0
+```
+
 # 1. Install face_recognition
 ```
 $ sudo apt-get install python3-opencv
