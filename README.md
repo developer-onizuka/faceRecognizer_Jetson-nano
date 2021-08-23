@@ -23,7 +23,17 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> dlib.DLIB_USE_CUDA
 False
 ```
-# 3. Install dlib with some compile options
+
+# 3. Install gcc-6 which will be needed by compiling with cuDNN lib
+```
+$ sudo vi /etc/apt/sources.list
+  # Adding below:
+  deb http://dk.archive.ubuntu.com/ubuntu/ bionic main universe
+$ sudo apt-get update
+$ sudo apt-get install gcc-6 g++-6
+```
+
+# 4. Install dlib with some compile options
 ```
 $ wget http://dlib.net/files/dlib-19.21.tar.bz2
 $ tar jxvf dlib-19.21.tar.bz2 
@@ -35,7 +45,7 @@ $ cd ..
 $ sudo python3 setup.py install --set DLIB_USE_CUDA=1 --set CUDA_HOST_COMPILER=/usr/bin/gcc-6
 ```
 
-# 4. Check if CUDA suppored again!
+# 5. Check if CUDA suppored again!
 ```
 $ python3
 Python 3.6.9 (default, Jan 26 2021, 15:33:00) 
