@@ -95,3 +95,8 @@ $ pip3 list |grep dlib
 dlib                             19.21.0
 launchpadlib                     1.10.6
 ```
+
+# 6. Test using test.py attached
+```
+$ ./test.py
+```
